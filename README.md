@@ -36,6 +36,7 @@ export default function authHeader() {
 }
 ```
 
+
 ### Project setup
 
 In the project directory, you can run:

@@ -83,6 +83,11 @@ const AdminMenu = () => {
               <Icon type="user" />New Drive
             </Link>
           </Menu.Item>
+          <Menu.Item key="7">
+            <Link to="/placement_dept/Schedule_Visit">
+              <Icon type="user" />Schedule Visit
+            </Link>
+          </Menu.Item>
           {/* <Menu.Item key="7">
             <Button href="/home" onClick={logOut}>
               Sign out

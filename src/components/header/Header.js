@@ -49,7 +49,9 @@ const Header = () => {
         <Link to={"/"} className="navbar-brand">
           Placement Module
         </Link>
-        <div className="navbar-nav mr-auto"></div>
+        <div className="navbar-nav mr-auto">
+          
+        </div>
         {currentUser ? (
           <div className="navbar-nav ml-auto">
             <li className="nav-item">

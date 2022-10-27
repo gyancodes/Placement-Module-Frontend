@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import ApplyJobService from '../../services/ApplyJobService'
 import { BrowserRouter as Link } from "react-router-dom";
 
-import {  IoMan, IoBus } from "react-icons/io5";
+import { IoMan, IoBus } from "react-icons/io5";
 import {
   Button,
   Card,
@@ -16,45 +16,45 @@ import { Col, Row, Container } from "reactstrap";
 
 class Applied_St_List extends Component {
 
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
 
-        this.state = {
-                applyjobs: []
-        }
-        this.applyJobs = this.applyJobs.bind(this);
-        this.editApplyjob = this.editApplyjob.bind(this);
-        this.deleteApplyJob = this.deleteApplyJob.bind(this);
+    this.state = {
+      applyjobs: []
     }
+    this.applyJobs = this.applyJobs.bind(this);
+    this.editApplyjob = this.editApplyjob.bind(this);
+    this.deleteApplyJob = this.deleteApplyJob.bind(this);
+  }
 
-    deleteApplyJob(id){
-        ApplyJobService.deleteApplyJob(id).then( res => {
-            this.setState({applyjobs: this.state.applyjobs.filter(applyjobs => applyjobs.id !== id)});
-        });
-    }
-    // viewApplyJob(id){
-    //     this.props.history.push(`/user/apply_job/${id}`);
-    // }
-    editApplyjob(id){
-        this.props.history.push(`/user/apply_job/${id}`);
-    }
+  deleteApplyJob(id) {
+    ApplyJobService.deleteApplyJob(id).then(res => {
+      this.setState({ applyjobs: this.state.applyjobs.filter(applyjobs => applyjobs.id !== id) });
+    });
+  }
+  // viewApplyJob(id){
+  //     this.props.history.push(`/user/apply_job/${id}`);
+  // }
+  editApplyjob(id) {
+    this.props.history.push(`/user/apply_job/${id}`);
+  }
 
-    componentDidMount(){
-        ApplyJobService.getAll().then((res) => {
-            this.setState({ applyjobs: res.data});
-        });
-    }
+  componentDidMount() {
+    ApplyJobService.getAll().then((res) => {
+      this.setState({ applyjobs: res.data });
+    });
+  }
 
-    applyJobs(){
-        this.props.history.push('/add_company/_add');
-    }
+  applyJobs() {
+    this.props.history.push('/add_company/_add');
+  }
 
   render() {
     // renderStudent(students) {
     return (
       <Container>
         <div className="mt-3">
-        <h4>Applied Students</h4>
+          <h4>Applied Students</h4>
           <Row>
             <Col sm="4">
               <Card body>
@@ -88,7 +88,7 @@ class Applied_St_List extends Component {
                 </CardText>
                 <Button block>
                   <a href="/user/new_job" className="text-decoration-none text-light">
-                 New Drive
+                    New Drive
                   </a>
                 </Button>
 
@@ -124,58 +124,58 @@ class Applied_St_List extends Component {
           {/* {this.state.students.map((student) => this.renderStudent(student))} */}
         </Container>
         {
-                                    this.state.applyjobs.map(
-                                        applyjob => 
-          <Row>
-            <Col sm="12">
-              <Card body>
-                <CardTitle tag="h5">
-                  <IoMan className="font-size-xl" />
-                  <span>{ applyjob.comName}</span>
-                </CardTitle>
-                <CardBody>
-                  <Row  key = {applyjob.id}>
-                    <Col sm="4" className="text-center">
-                      <span className="font-weight-bold"> applyjob  Address: </span>
-                      <span>{applyjob.name}</span>
-                    </Col>
+          this.state.applyjobs.map(
+            applyjob =>
+              <Row>
+                <Col sm="12">
+                  <Card body>
+                    <CardTitle tag="h5">
+                      <IoMan className="font-size-xl" />
+                      <span>{applyjob.comName}</span>
+                    </CardTitle>
+                    <CardBody>
+                      <Row key={applyjob.id}>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weight-bold"> applyjob  Address: </span>
+                          <span>{applyjob.name}</span>
+                        </Col>
 
-                   
 
-                    <Col sm="4" className="text-center">
-                      <span className="font-weiht-bolder">applyjob  Email:</span>
-                      <span>{applyjob.emailId}</span>
-                    </Col>
 
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">applyjob Type:</span>
-                      <span>{applyjob.regdNo}</span>
-                    </Col>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weiht-bolder">applyjob  Email:</span>
+                          <span>{applyjob.emailId}</span>
+                        </Col>
 
-                    
-                    
-                    
-                  </Row>
-                </CardBody>
-                <CardFooter>
-                  <Row>
-                    <Col sm-6>
-                      {/* <Button onClick={ () => this.editApplyjob(applyjob.id)} block outline color="primary">
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">applyjob Type:</span>
+                          <span>{applyjob.regdNo}</span>
+                        </Col>
+
+
+
+
+                      </Row>
+                    </CardBody>
+                    <CardFooter>
+                      <Row>
+                        <Col sm-6>
+                          {/* <Button onClick={ () => this.editApplyjob(applyjob.id)} block outline color="primary">
                         Modify Details
                       </Button> */}
-                    </Col>
+                        </Col>
 
-                    <Col sm-6>
-                      <Button onClick={ () => this.deleteApplyJob(applyjob.id)} block outline color="denger">
-                        Cancel
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-        )}
+                        <Col sm-6>
+                          <Button onClick={() => this.deleteApplyJob(applyjob.id)} block outline color="denger">
+                            Cancel
+                          </Button>
+                        </Col>
+                      </Row>
+                    </CardFooter>
+                  </Card>
+                </Col>
+              </Row>
+          )}
       </Container>
     );
   }

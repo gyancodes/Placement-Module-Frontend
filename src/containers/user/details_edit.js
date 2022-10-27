@@ -10,7 +10,7 @@ import {
   InputNumber,
   Button,
   Form,
-  message
+  //message
 } from "antd";
 import {
   fetchUserProfile,
@@ -237,19 +237,33 @@ class DetailsEditForm extends Component {
               </Col>
             </Row>
             <Row className="profile-row">
-              <Col span={7}>Degree Branch:</Col>
+              <Col span={7}>Course:</Col>
               <Col>
                 {getFieldDecorator("branch", {
                   initialValue: data.branch
                 })(
                   <Select className="regular-profile-input">
-                    <Option value="ICT">ICT</Option>
-                    <Option value="ICT+CS">ICT with honors in CS</Option>
-                    <Option value="M.Tech">M.Tech</Option>
-                    <Option value="M.Sc(IT)">M.Sc(IT)</Option>
-                    <Option value="M.Sc(ICT-ARD)">M.Sc(ICT-ARD)</Option>
-                    <Option value="M.Des">M.Des</Option>
-                    <Option value="Ph.D">Ph.D</Option>
+                    <Option value="BTECH-CSE">B.Tech-Computer Science and Engineering </Option>
+                    <Option value="BTECH-MECH">B.Tech-Mechanical Engineering </Option>
+                    <Option value="BTECH-EE">B.Tech-Electronics Engineering </Option>
+                    <Option value="BTECH-CIVIL">B.Tech-Civil Engineering </Option>
+                    <Option value="BTECH-AERO">B.Tech-Aerospace Engineering </Option>
+                    <Option value="BTECH-AUTO">B.Tech-Automobile Engineering </Option>
+                    <Option value="BTECH-ECE">B.Tech-Elctronics amd Communication Engineering </Option>
+                    <Option value="MTECH-CSE">M.Tech-Computer Science and Engineering </Option>
+                    <Option value="MTECH-MECH">M.Tech-Mechanical Engineering </Option>
+                    <Option value="MTECH-EE">M.Tech-Electronics Engineering </Option>
+                    <Option value="MTECH-CIVIL">M.Tech-Civil Engineering </Option>
+                    <Option value="MTECH-AERO">M.Tech-Aerospace Engineering </Option>
+                    <Option value="MTECH-AUTO">M.Tech-Automobile Engineering </Option>
+                    <Option value="MTECH-ECE">M.Tech-Elctronics amd Communication Engineering </Option>
+                    <Option value="BCA">Bachelors of Computer Applications</Option>
+                    <Option value="MCA">Masters of Computer Applications</Option>
+                    <Option value="B.Sc">Bachelors of Science</Option>
+                    <Option value="M.Sc">Masters of Science</Option>
+                    <Option value="BBA">Bachelor of Business Administration</Option>
+                    <Option value="MBA">Masters of Business Administration</Option>
+                    <Option value="Ph.D">Doctor of Philosophy</Option>
                   </Select>
                 )}
               </Col>

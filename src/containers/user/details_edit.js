@@ -24,8 +24,8 @@ const Option = Select.Option;
 const { TextArea } = Input;
 
 class DetailsEditForm extends Component {
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.user.message === "Successfully updated user profile") {
+  //componentWillReceiveProps(nextProps) {
+  //if (nextProps.user.message === "Successfully updated user profile") {
   //     message.success("Profile successfully updated.");
   //     nextProps.user.message = "";
   //   }

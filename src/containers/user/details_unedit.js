@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Row, Col } from "antd";
 import { fetchUserProfile } from "../../store/actions";
 
-//import moment from "moment";
+import moment from "moment";
 
 class DetailsUnedit extends Component {
   // componentDidMount() {

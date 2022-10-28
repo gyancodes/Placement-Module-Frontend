@@ -80,6 +80,7 @@ const Profile = () => {
                   src="https://bootdey.com/img/Content/avatar/avatar7.png"
                   title=""
                   alt=""
+                  height="200px"
                 />
               </div>
             </div>
@@ -87,7 +88,7 @@ const Profile = () => {
         </div>
       </section>
     </div>
-  );
+  )
 };
 
 export default Profile;

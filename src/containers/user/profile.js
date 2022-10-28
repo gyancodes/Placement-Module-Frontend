@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Button, Col, Row, Icon } from "antd";
 import { fetchUserProfile, editChange } from "../../store/actions";
 
-import DetailsUnedit from "./details_unedit";
+//import DetailsUnedit from "./details_unedit";
 import DetailsEdit from "./details_edit";
 
 class UserProfile extends Component {
@@ -38,7 +38,7 @@ class UserProfile extends Component {
 
   handleEdit = () => {
     this.props.history.push('/user/details_edit');
-    // this.props.editChange();
+     this.props.editChange();
   };
 
   render() {
@@ -73,8 +73,7 @@ class UserProfile extends Component {
               </p>
           </Col>
         </Row>
-        <DetailsUnedit /> 
-        {/* <DetailsEdit/> */}
+        <DetailsEdit /> 
         {/* {this.details()} */}
       </div>
     );

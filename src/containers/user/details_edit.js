@@ -46,7 +46,7 @@ class DetailsEditForm extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, fieldValues) => {
       const values = {
-        ...fieldValues,
+        ...fieldValues,    
         dob: fieldValues["dob"].format("YYYY-MM-DD")
       };
       console.log(values);
@@ -271,7 +271,12 @@ class DetailsEditForm extends Component {
               </Col>
             </Row>
             <FormItem className="profile-update">
-              <Button size="large" type="primary" htmlType="submit">
+              <Button
+                className="update"
+                size="large"
+                type="primary"
+                onClick={this.handleSubmit}
+              >
                 Update Details
               </Button>
               <Button

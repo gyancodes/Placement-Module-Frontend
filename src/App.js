@@ -24,6 +24,7 @@ import { history } from "./helpers/history";
 //custom
 import Dashboard from "./components/Pages/Dashboard";
 import Header from "./components/header/Header";
+import HeaderNav from "./components/layout/header/HeaderNav"
 import Home from "./components/home/index";
 import UserMain from "../src/containers/user/index";
 import AdminMain from "../src/containers/admin/index";
@@ -33,43 +34,45 @@ import SignInForm from "./containers/signin/index";
 import ForgotPassword from "./containers/forgot_password/forgot_password";
 import ResetPassword from "./containers/reset_password/reset_password";
 import Test from "./containers/admin/test";
+import Footer from "./components/footer";
+import { HeroTitle } from "./components/layout/home/HeroTitle";
 const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
 
-    
-    <Router history={history}>
-      <div>
-        <Header />
-        
-        <div className="">
-          <Switch>
-            <Route exact path={["/", "/home"]} component={Home} />
-            <Route path="/user" component={UserMain} />
-            <Route path="/placement_dept" component={AdminMain} />
-            <Route path="/dashboard" component={Dashboard} />
-            <Route path="/signup" component={SignUpForm} />
-            <Route path="/signin" component={SignInForm} />
-            <Route path="/forgot_password" component={ForgotPassword} />
-            <Route path="/reset_password" component={ResetPassword} />
-            <Route path="/Location" component={Location} />
 
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-            <Route path="/profile" component={Profile} />
-            <Route path="/companys_list" component={CompanyPage} />
-            <Route path="/company_list" component={CompanyList} />
-            <Route path="/companys_listpage" component={CompanysList} />
-            <Route path="/add_company/:id" component={CreateCompany}></Route>
-            <Route path="/view_company/:id" component={ViewCompany}></Route>
-            <Route path="/test" component={Test}></Route>
-          </Switch>
+      <Router history={history}>
+        <div>
+          <HeaderNav />
+          {/* <Header /> */}
+          <div className="">
+            <Switch>
+              {/* <Route exact path={["/", "/home"]} component={Home} /> */}
+              <Route exact path={["/", "/home"]} component={HeroTitle}/>
+              <Route path="/user" component={UserMain} />
+              <Route path="/placement_dept" component={AdminMain} />
+              <Route path="/dashboard" component={Dashboard} />
+              <Route path="/signup" component={SignUpForm} />
+              <Route path="/signin" component={SignInForm} />
+              <Route path="/forgot_password" component={ForgotPassword} />
+              <Route path="/reset_password" component={ResetPassword} />
+              <Route path="/Location" component={Location} />
 
+              <Route path="/login" component={Login} />
+              <Route path="/register" component={Register} />
+              <Route path="/profile" component={Profile} />
+              <Route path="/companys_list" component={CompanyPage} />
+              <Route path="/company_list" component={CompanyList} />
+              <Route path="/companys_listpage" component={CompanysList} />
+              <Route path="/add_company/:id" component={CreateCompany}></Route>
+              <Route path="/view_company/:id" component={ViewCompany}></Route>
+              <Route path="/test" component={Test}></Route>
+            </Switch>
+          </div>
+  
+          {/* <AuthVerify logOut={logOut}/> */}
         </div>
-
-        {/* <AuthVerify logOut={logOut}/> */}
-      </div>
-    </Router>
+      </Router>
     </MantineProvider>
   );
 };

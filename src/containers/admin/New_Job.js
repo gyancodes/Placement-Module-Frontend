@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import NewJobService from "../../services/New-job";
 import { BrowserRouter as Link } from "react-router-dom";
 
-import {  IoMan, IoBus } from "react-icons/io5";
+import { IoMan, IoBus } from "react-icons/io5";
 import {
   Button,
   Card,
@@ -16,36 +16,36 @@ import { Col, Row, Container } from "reactstrap";
 
 class New_Job extends Component {
 
-    constructor(props) {
-        super(props)
+  constructor(props) {
+    super(props)
 
-        this.state = {
-                jobs: []
-        }
-        this.addJobDrive = this.addJobDrive.bind(this);
-        this.editJobDrive = this.editJobDrive.bind(this);
-        this.deleteJobDrive = this.deleteJobDrive.bind(this);
+    this.state = {
+      jobs: []
     }
+    this.addJobDrive = this.addJobDrive.bind(this);
+    this.editJobDrive = this.editJobDrive.bind(this);
+    this.deleteJobDrive = this.deleteJobDrive.bind(this);
+  }
 
-    deleteJobDrive(id){
-        NewJobService.deleteJobDrive(id).then( res => {
-            this.setState({jobs: this.state.jobs.filter(job => job.id !== id)});
-        });
-    }
-   
-    editJobDrive(id){
-        this.props.history.push(`/placement_dept/add_job/${id}`);
-    }
+  deleteJobDrive(id) {
+    NewJobService.deleteJobDrive(id).then(res => {
+      this.setState({ jobs: this.state.jobs.filter(job => job.id !== id) });
+    });
+  }
 
-    componentDidMount(){
-        NewJobService.getAll().then((res) => {
-            this.setState({ jobs: res.data});
-        });
-    }
+  editJobDrive(id) {
+    this.props.history.push(`/placement_dept/add_job/${id}`);
+  }
 
-    addJobDrive(){
-        this.props.history.push('/placement_dept/add_job/_add');
-    }
+  componentDidMount() {
+    NewJobService.getAll().then((res) => {
+      this.setState({ jobs: res.data });
+    });
+  }
+
+  addJobDrive() {
+    this.props.history.push('/placement_dept/add_job/_add');
+  }
 
   render() {
     // renderStudent(students) {
@@ -84,7 +84,7 @@ class New_Job extends Component {
                   content.
                 </CardText>
                 <Button block color="success">
-                <Link to="./ShowStudentList.tsx">Student Register </Link></Button>
+                  <Link to="./ShowStudentList.tsx">Student Register </Link></Button>
               </Card>
             </Col>
 
@@ -117,76 +117,76 @@ class New_Job extends Component {
           {/* {this.state.students.map((student) => this.renderStudent(student))} */}
         </Container>
         {
-                                    this.state.jobs.map(
-                                        job => 
-          <Row>
-            <Col sm="12">
-              <Card body>
-                <CardTitle tag="h5">
-                  <IoMan className="font-size-xl" />
-                  <span>{ job.comName}</span>
-                </CardTitle>
-                <CardBody>
-                  <Row  key = {job.id}>
-                    <Col sm="4" className="text-center">
-                      <span className="font-weight-bold"> job  Type: </span>
-                      <span>{job.jobType}</span>
-                    </Col>
-
-                   
-
-                    <Col sm="4" className="text-center">
-                      <span className="font-weiht-bolder">job Salary:</span>
-                      <span>{job.jobSalary}</span>
-                    </Col>
-
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">job Vacancy:</span>
-                      <span>{job.jobVacancy}</span>
-                    </Col>
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">Drive Round:</span>
-                      <span>{job.jobRound}</span>
-                    </Col>
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">Drive Date:</span>
-                      <span>{job.jobDate}</span>
-                    </Col>
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">job criteria:</span>
-                      <span>{job.jobCriteria}</span>
-                    </Col>
-                    
-
-                    <Col sm="4" className="text-center">
-                      <span className="font-weith-bold">job Des:</span>
-                      <span>{job.jobDescription}</span>
-                    </Col>
+          this.state.jobs.map(
+            job =>
+              <Row>
+                <Col sm="12">
+                  <Card body>
+                    <CardTitle tag="h5">
+                      <IoMan className="font-size-xl" />
+                      <span>{job.comName}</span>
+                    </CardTitle>
+                    <CardBody>
+                      <Row key={job.id}>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weight-bold"> job  Type: </span>
+                          <span>{job.jobType}</span>
+                        </Col>
 
 
-                    
-                    
-                  </Row>
-                </CardBody>
-                <CardFooter>
-                  <Row>
-                    <Col sm-6>
-                      <Button onClick={ () => this.editJobDrive(job.id)} block outline color="success">
-                        Edit
-                      </Button>
-                    </Col>
 
-                    <Col sm-6>
-                      <Button onClick={ () => this.deleteJobDrive(job.id)} block outline color="denger">
-                        Delete
-                      </Button>
-                    </Col>
-                  </Row>
-                </CardFooter>
-              </Card>
-            </Col>
-          </Row>
-        )}
+                        <Col sm="4" className="text-center">
+                          <span className="font-weiht-bolder">job Salary:</span>
+                          <span>{job.jobSalary}</span>
+                        </Col>
+
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">job Vacancy:</span>
+                          <span>{job.jobVacancy}</span>
+                        </Col>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">Drive Round:</span>
+                          <span>{job.jobRound}</span>
+                        </Col>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">Drive Date:</span>
+                          <span>{job.jobDate}</span>
+                        </Col>
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">job criteria:</span>
+                          <span>{job.jobCriteria}</span>
+                        </Col>
+
+
+                        <Col sm="4" className="text-center">
+                          <span className="font-weith-bold">job Des:</span>
+                          <span>{job.jobDescription}</span>
+                        </Col>
+
+
+
+
+                      </Row>
+                    </CardBody>
+                    <CardFooter>
+                      <Row>
+                        <Col sm-6>
+                          <Button onClick={() => this.editJobDrive(job.id)} block outline color="success">
+                            Edit
+                          </Button>
+                        </Col>
+
+                        <Col sm-6>
+                          <Button onClick={() => this.deleteJobDrive(job.id)} block outline color="denger">
+                            Delete
+                          </Button>
+                        </Col>
+                      </Row>
+                    </CardFooter>
+                  </Card>
+                </Col>
+              </Row>
+          )}
       </Container>
     );
   }

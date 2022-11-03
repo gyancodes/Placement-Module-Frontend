@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Router, Switch, Route, Link } from "react-router-dom";
+import { MantineProvider } from '@mantine/core';
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
@@ -33,9 +35,13 @@ import ResetPassword from "./containers/reset_password/reset_password";
 import Test from "./containers/admin/test";
 const App = () => {
   return (
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+
+    
     <Router history={history}>
       <div>
         <Header />
+        
         <div className="">
           <Switch>
             <Route exact path={["/", "/home"]} component={Home} />
@@ -58,11 +64,13 @@ const App = () => {
             <Route path="/view_company/:id" component={ViewCompany}></Route>
             <Route path="/test" component={Test}></Route>
           </Switch>
+
         </div>
 
         {/* <AuthVerify logOut={logOut}/> */}
       </div>
     </Router>
+    </MantineProvider>
   );
 };
 

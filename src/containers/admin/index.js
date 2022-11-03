@@ -24,6 +24,8 @@ import Applied_St_List from "./Applied_St_List";
 // import Calendar from "../components/Calender/Containers/Home/index";
 import Calendar from "../../components/Calender/Containers/Home/index";
 import ScheduleVisit from "../../components/layout/ScheduleVisit";
+import AddForm from "../../components/layout/AddForm";
+import PreviousVisit from "../../components/layout/PreviousVisit";
 
 
 const { Content } = Layout;
@@ -31,6 +33,8 @@ const { Content } = Layout;
 class AdminMain extends Component {
   render() {
     return (
+
+
       <Layout className="admin-main">
         <AdminMenu />
         <Layout>
@@ -45,8 +49,19 @@ class AdminMain extends Component {
               <Route path="/placement_dept/employer/:id" component={EmployerShow} />
               <Route path="/placement_dept/user/:id" component={UserShow} />
               <Route path="/placement_dept/applied_st_list" component={Applied_St_List} />
-              <Route path="/placement_dept/schedulemeeting" component={Calendar}></Route>
-              <Route to="/placement_dept/schedulevisit" component={ScheduleVisit}></Route>
+              <Route path="/placement_dept/schedulemeeting" component={Calendar} />
+              <Route path="/placement_dept/addform" component={AddForm} />
+              <Route path="/placement_dept/previousvisit" component={PreviousVisit} />
+              <Route to="/placement_dept/schedulevisit" component={ScheduleVisit} />
+              {/* <Route path="/placement_dept/addform" component={AddForm} /> */}
+              {/* <Route to="/placement_dept/schedulevisit/addform" component={AddForm} /> */}
+              {/* <Route to="/placement_dept/schedulevisit/previousvisit" component={PreviousVisit} />  */}
+              {/* <Route to="/placement_dept/addformfhd" component={AddForm} /> */}
+
+
+
+
+
 
             </Switch>
           </Content>

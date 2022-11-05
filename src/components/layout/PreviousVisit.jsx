@@ -21,7 +21,7 @@ const PreviousVisit = () => {
         // },
       })}
     >
-      Previous Visits
+      Failed Visits
     </Box>
     </>
   )

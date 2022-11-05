@@ -1,9 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Box } from '@mantine/core';
+
 
 const ScheduleVisit = () => {
   return (
     <>
+    <div>
+    <Box
+      sx={(theme) => ({
+        backgroundColor: theme.colorScheme === 'green' ? theme.colors.green[10] : theme.colors.green[6],
+        textAlign: 'center',
+        padding: theme.spacing.xl,
+        borderRadius: theme.radius.md,
+        cursor: 'pointer',
+        color: 'white',
+        fontSize: '30px'
+
+        // '&:hover': {
+        //   backgroundColor:
+        //     theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+        // },
+      })}
+    >
+      Schedule Visit
+    </Box>
+    </div>
       <div className="d-flex justify-content-center align-items-center">
         <div
           className="card align-items-center justify-content-center"
@@ -16,7 +38,7 @@ const ScheduleVisit = () => {
               style={{ width: "10rem" }}
              
             >
-              Add
+              Add Visit
             </Link>
           </div>
         </div>
@@ -31,7 +53,7 @@ const ScheduleVisit = () => {
               style={{ width: "10rem" }}
              
             >
-              Previous
+              Failed Visit
             </Link>
           </div>
         </div>
@@ -45,7 +67,7 @@ const ScheduleVisit = () => {
               className="btn btn-primary"
               style={{ width: "10rem" }}
             >
-              Upcoming
+              Upcoming Visit
             </a>
           </div>
         </div>
@@ -59,7 +81,7 @@ const ScheduleVisit = () => {
               className="btn btn-primary"
               style={{ width: "10rem" }}
             >
-              Confirmed
+              Completed Visit
             </a>
           </div>
         </div>

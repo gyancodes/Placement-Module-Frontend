@@ -1,4 +1,12 @@
 import React from "react";
+import { useState, useEffect, useCallback } from "react";
+import { useDispatch, useSelector } from "react-redux";
+
+//auth
+import EventBus from "../../../common/EventBus";
+import { logout } from "../../../actions/auth";
+import { clearMessage } from "../../../actions/message";
+import { history } from "../../../helpers/history";
 
 import { CUTMLogo } from "../../../assets/images/cutm.png";
 
@@ -38,9 +46,12 @@ import {
   IconChevronDown,
 } from "@tabler/icons";
 
-const logo = CUTMLogo;
-
 const useStyles = createStyles((theme) => ({
+  link_logout: {
+    color: "red",
+    fontWeight: 500
+
+  },
   link: {
     display: "flex",
     alignItems: "center",
@@ -82,20 +93,6 @@ const useStyles = createStyles((theme) => ({
     "&:active": theme.activeStyles,
   },
 
-  dropdownFooter: {
-    backgroundColor:
-      theme.colorScheme === "dark"
-        ? theme.colors.dark[7]
-        : theme.colors.gray[0],
-    margin: -theme.spacing.md,
-    marginTop: theme.spacing.sm,
-    padding: `${theme.spacing.md}px ${theme.spacing.md * 2}px`,
-    paddingBottom: theme.spacing.xl,
-    borderTop: `1px solid ${
-      theme.colorScheme === "dark" ? theme.colors.dark[5] : theme.colors.gray[1]
-    }`,
-  },
-
   hiddenMobile: {
     [theme.fn.smallerThan("sm")]: {
       display: "none",
@@ -109,212 +106,153 @@ const useStyles = createStyles((theme) => ({
   },
 }));
 
-// const mockdata = [
-//   {
-//     icon: IconCode,
-//     title: "Open source",
-//     description: "This Pokémon’s cry is very loud and distracting",
-//   },
-//   {
-//     icon: IconCoin,
-//     title: "Free for everyone",
-//     description: "The fluid of Smeargle’s tail secretions changes",
-//   },
-//   {
-//     icon: IconBook,
-//     title: "Documentation",
-//     description: "Yanma is capable of seeing 360 degrees without",
-//   },
-//   {
-//     icon: IconFingerprint,
-//     title: "Security",
-//     description: "The shell’s rounded shape and the grooves on its.",
-//   },
-//   {
-//     icon: IconChartPie3,
-//     title: "Analytics",
-//     description: "This Pokémon uses its flying ability to quickly chase",
-//   },
-//   {
-//     icon: IconNotification,
-//     title: "Notifications",
-//     description: "Combusken battles with the intensely hot flames it spews",
-//   },
-// ];
-
-export function HeaderNav() {
+const HeaderNav = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
   const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
 
-  // const links = mockdata.map((item) => (
-  //   <UnstyledButton className={classes.subLink} key={item.title}>
-  //     <Group noWrap align="flex-start">
-  //       <ThemeIcon size={34} variant="default" radius="md">
-  //         <item.icon size={22} color={theme.fn.primaryColor()} />
-  //       </ThemeIcon>
-  //       <div>
-  //         <Text size="sm" weight={500}>
-  //           {item.title}
-  //         </Text>
-  //         <Text size="xs" color="dimmed">
-  //           {item.description}
-  //         </Text>
-  //       </div>
-  //     </Group>
-  //   </UnstyledButton>
-  // ));
+  const [showModeratorBoard, setShowModeratorBoard] = useState(false);
+  const [showAdminBoard, setShowAdminBoard] = useState(false);
 
-  const location = useLocation();
+  const { user: currentUser } = useSelector((state) => state.auth);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    history.listen((location) => {
+      dispatch(clearMessage);
+    });
+  }, [dispatch]);
+
+  const logOut = useCallback(() => {
+    dispatch(logout());
+  }, [dispatch]);
+
+  useEffect(() => {
+    if (currentUser) {
+      setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
+      setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
+    } else {
+      setShowModeratorBoard(false);
+      setShowAdminBoard(false);
+    }
+
+    EventBus.on("logout", () => {
+      logOut();
+    });
+
+    return () => {
+      EventBus.remove("logout");
+    };
+  }, [currentUser, logOut]);
 
   return (
-    <Box pb={40}>
-      <Header height={60} px="md">
-        <Group position="apart" sx={{ height: "100%" }}>
-          <Link to="/">
-          
-          
+    <>
+      {/* Top Navbar */}
+      <Box pb={20}>
+        <Header height={60} px="md">
+          <Group position="apart" sx={{ height: "100%" }}>
+            <Group>
+              <Link to="/">
+                <Title order={2}>Placement Cell</Title>
+              </Link>
+            </Group>
+            {currentUser ? (
+              <Group sx={{ height: "100%" }} spacing={0}>
+                {/* <a href="#" className={classes.link}>
+                Home
+              </a>
+
+              <a href="#" className={classes.link}>
+                About
+              </a>
+              <a href="#" className={classes.link}>
+                Contact
+              </a> */}
+
+                <Group>
+                  <Link
+                    to="/login"
+                  className={classes.link_logout}
+                    onClick={logOut}
+                    
+                  >
+                    Logout
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-logout"
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="red"
+                      fill="none"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                   
+                      
+                    >
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                      <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                      <path d="M7 12h14l-3 -3m0 6l3 -3" />
+                    </svg>
+                  </Link>
+                </Group>
+              </Group>
+            ) : (
+              <>
+                <Group className={classes.hiddenMobile}>
+                  <Link to="/login">
+                    <Button variant="default">Log in</Button>
+                  </Link>
+
+                  <Link to="/register">
+                    <Button>Sign up</Button>
+                  </Link>
+                </Group>
+                <Burger
+                  opened={drawerOpened}
+                  onClick={toggleDrawer}
+                  className={classes.hiddenDesktop}
+                />
+              </>
+            )}
+          </Group>
+        </Header>
+
+        <Drawer
+          opened={drawerOpened}
+          onClose={closeDrawer}
+          size="100%"
+          padding="md"
+          title={
             <Title order={2} color="blue">
-              
               Placement Cell
             </Title>
-          </Link>
+          }
+          className={classes.hiddenDesktop}
+          zIndex={1000000}
+        >
+          <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
+            <Divider
+              my="sm"
+              color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
+            />
 
-          <Group
-            sx={{ height: "100%" }}
-            spacing={0}
-            className={classes.hiddenMobile}
-          >
-            <a href="#" className={classes.link}>
-              Home
-            </a>
-            <HoverCard
-              width={600}
-              position="bottom"
-              radius="md"
-              shadow="md"
-              withinPortal
-            >
-              <HoverCard.Target>
-                <a href="#" className={classes.link}>
-                  <Center inline>
-                    <Box component="span" mr={5}>
-                      For Companies
-                    </Box>
-                    <IconChevronDown
-                      size={16}
-                      color={theme.fn.primaryColor()}
-                    />
-                  </Center>
-                </a>
-              </HoverCard.Target>
+            <Divider
+              my="sm"
+              color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
+            />
 
-              <HoverCard.Dropdown sx={{ overflow: "hidden" }}>
-                <SimpleGrid cols={1} row={2} spacing={4}>
-                  {/* {links} */}
-                  <Link to="/">Home</Link>
-                  <Link to="/">Home</Link>
-                </SimpleGrid>
-
-                {/* <div className={classes.dropdownFooter}>
-                    <Group position="apart">
-                      <div>
-                        <Text weight={500} size="sm">
-                          Get started
-                        </Text>
-                        <Text size="xs" color="dimmed">
-                          Their food sources have decreased, and their numbers
-                        </Text>
-                      </div>
-                      <Button variant="default">Get started</Button>
-                    </Group>
-                  </div> */}
-              </HoverCard.Dropdown>
-            </HoverCard>
-            <a href="#" className={classes.link}>
-              Learn
-            </a>
-            <a href="#" className={classes.link}>
-              Academy
-            </a>
-          </Group>
-
-          <Group className={classes.hiddenMobile}>
-            {/* <NavLink
-              label="Home"
-              component={Link}
-              to="/home"
-              active={location.pathname === "/home"}
-            /> */}
-
-            <Link to="/login">
+            <Group position="center" grow pb="xl" px="md">
               <Button variant="default">Log in</Button>
-            </Link>
-
-            <Link to="/register">
               <Button>Sign up</Button>
-            </Link>
-          </Group>
-
-          <Burger
-            opened={drawerOpened}
-            onClick={toggleDrawer}
-            className={classes.hiddenDesktop}
-          />
-        </Group>
-      </Header>
-
-      <Drawer
-        opened={drawerOpened}
-        onClose={closeDrawer}
-        size="100%"
-        padding="md"
-        title={
-          <Title order={2} color="blue">
-            Placement Cell
-          </Title>
-        }
-        className={classes.hiddenDesktop}
-        zIndex={1000000}
-      >
-        <ScrollArea sx={{ height: "calc(100vh - 60px)" }} mx="-md">
-          <Divider
-            my="sm"
-            color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
-          />
-          {/* 
-          <a href="#" className={classes.link}>
-            Home
-          </a>
-          <UnstyledButton className={classes.link} onClick={toggleLinks}>
-            <Center inline>
-              <Box component="span" mr={5}>
-                Features
-              </Box>
-              <IconChevronDown size={16} color={theme.fn.primaryColor()} />
-            </Center>
-          </UnstyledButton>
-          <Collapse in={linksOpened}>{links}</Collapse>
-          <a href="#" className={classes.link}>
-            Learn
-          </a>
-          <a href="#" className={classes.link}>
-            Academy
-          </a> */}
-
-          <Divider
-            my="sm"
-            color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
-          />
-
-          <Group position="center" grow pb="xl" px="md">
-            <Button variant="default">Log in</Button>
-            <Button>Sign up</Button>
-          </Group>
-        </ScrollArea>
-      </Drawer>
-    </Box>
+            </Group>
+          </ScrollArea>
+        </Drawer>
+      </Box>
+      {/* Top Navbar Ends */}
+    </>
   );
-}
+};
 export default HeaderNav;

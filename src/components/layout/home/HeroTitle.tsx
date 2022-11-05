@@ -2,6 +2,7 @@ import React from 'react';
 import { createStyles, Container, Text, Button, Group, Image } from '@mantine/core';
 import { Link } from "react-router-dom";
 import heroimg from "../../../assets/images/heroimg.svg";
+import { ClassNames } from '@emotion/react';
 // import { GithubIcon } from '@mantine/ds';
 
 const BREAKPOINT = '@media (max-width: 755px)';
@@ -73,7 +74,14 @@ const useStyles = createStyles((theme) => ({
             paddingRight: 18,
             flex: 1,
         },
+
+        
     },
+    hiddenImage: {
+        [theme.fn.smallerThan("sm")]: {
+            display: "none",
+          },
+    }
 }));
 
 export function HeroTitle() {
@@ -112,7 +120,7 @@ export function HeroTitle() {
 
 
 
-                    <Link to="/register">
+                    <Link to="/signin">
                         <Button
                             component="a"
                             href="https://github.com/mantinedev/mantine"
@@ -127,7 +135,13 @@ export function HeroTitle() {
                 </Group>
                
             </Container>
-            <div style={{ width: 400, marginLeft: 'auto', marginRight: 'auto' }}>
+
+            <Group>
+                <Image>
+
+                </Image>
+            </Group>
+            <div style={{ width: 400, marginLeft: 'auto', marginRight: 'auto' }} className={classes.hiddenImage}>
                     <Image
                         radius="md"
                         src={img}

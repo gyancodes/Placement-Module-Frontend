@@ -26,6 +26,8 @@ import Calendar from "../../components/Calender/Containers/Home/index";
 import ScheduleVisit from "../../components/layout/ScheduleVisit";
 import AddForm from "../../components/layout/AddForm";
 import PreviousVisit from "../../components/layout/PreviousVisit";
+import AdminDashboard from "./AdminDashboard";
+
 
 
 const { Content } = Layout;
@@ -37,6 +39,9 @@ class AdminMain extends Component {
 
       <Layout className="admin-main">
         <AdminMenu />
+        {/* <AdminDashboard/> */}
+
+      
         <Layout>
           <Content className="admin-content">
             <Switch>

@@ -30,6 +30,12 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const AddForm = () => {
+
+  const addData = (async) => {
+    
+
+  }
+
   const { classes } = useStyles();
   return (
     <>

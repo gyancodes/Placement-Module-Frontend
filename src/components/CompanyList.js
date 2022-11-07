@@ -69,7 +69,7 @@ class CompanyList extends Component {
                 </CardText>
                 <Button block color="success">
                   <Link to="./ShowStudentList.tsx">
-                    <span>My Company</span>
+                    <span>Applied Drive</span>
                   </Link>
                 </Button>
               </Card>
@@ -88,7 +88,7 @@ class CompanyList extends Component {
                 </CardText>
                 <Button block>
                   <a href="/user/new_job" className="text-decoration-none text-light">
-                 New Company
+                  Upcoming Recruitment Drives
                   </a>
                 </Button>
 

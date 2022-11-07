@@ -52,7 +52,7 @@ class New_Job extends Component {
     return (
       <Container>
         <div className="mt-3">
-        <h4>New Deive</h4>
+        <h4>New Drive</h4>
           <Row>
             <Col sm="4">
               <Card body>

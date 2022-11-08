@@ -68,9 +68,9 @@ class CompanyList extends Component {
                   content.
                 </CardText>
                 <Button block color="success">
-                  <Link to="./ShowStudentList.tsx">
+                <a href="/user/applied_job" className="text-decoration-none text-light">
                     <span>Applied Drive</span>
-                  </Link>
+                  </a>
                 </Button>
               </Card>
             </Col>

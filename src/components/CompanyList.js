@@ -54,7 +54,7 @@ class CompanyList extends Component {
     return (
       <Container>
        <div className="mt-3">
-         <h4>Company List</h4>
+         <h4>Job Application</h4>
           <Row>
             <Col sm="4">
               <Card body>

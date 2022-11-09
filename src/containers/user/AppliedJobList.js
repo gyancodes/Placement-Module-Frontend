@@ -55,27 +55,37 @@ class AppliedJobList extends Component {
       <Container>
         <div className="mt-3">
         <h4>Applied Job Details</h4>
-          {/* <Row>
+          { <Row>
             <Col sm="4">
               <Card body>
                 <CardTitle tag="h5">
                   <IoMan className="font-size-xl" />
-                  5 Drive
+                  Company Name
                 </CardTitle>
 
                 <CardText>
-                  With supporting text below as a natural lead-in to additional
-                  content.
+                <div class="row about-list">
+                  <div class="col-md-6">
+                    <div class="media">
+                      <label>Date:</label>
+                      <p>5/12/22</p>
+                    </div>
+                    <div class="media">
+                      <label>Job Role:</label>
+                      <p>SDE</p>
+                    </div>
+                  </div>
+                </div>
                 </CardText>
                 <Button block color="success">
                   <Link to="./ShowStudentList.tsx">
-                    <span>My Drives</span>
+                    <span>Job Description</span>
                   </Link>
                 </Button>
               </Card>
             </Col>
 
-            <Col sm="4">
+            {/*<Col sm="4">
               <Card body>
                 <CardTitle tag="h5">
                   <IoMan className="font-size-xl" />
@@ -108,8 +118,8 @@ class AppliedJobList extends Component {
                 </CardText>
                 <Button>View More</Button>
               </Card>
-            </Col>
-          </Row> */}
+            </Col>*/}
+          </Row> }
         </div>
         {/* <Container className="mt-4">
           <Row>

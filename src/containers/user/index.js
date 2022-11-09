@@ -14,18 +14,18 @@ import Apply_Job from "./Apply_job";
 import DetailsEdit from './details_edit'
 import New_Job from "./New_job";
 import AppliedJobList from "./AppliedJobList"
-<<<<<<< HEAD
+
 import HeaderNav from "../../components/layout/header/HeaderNav";
-=======
+
 import Notifications from "./Notifications";
->>>>>>> 46e30a22d3cf1b2ac807a3ff9fcb27870efed209
+
 const { Content } = Layout;
 
 class UserMain extends Component {
   render() {
     return (
       <Layout>
-       
+
         {/* <HeaderNav/> */}
         <UserMenu />
         <Layout>

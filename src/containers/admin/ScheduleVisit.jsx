@@ -1,7 +1,7 @@
 import { Group, Box, Button } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
-import { Box } from '@mantine/core';
+
 
 
 
@@ -9,7 +9,7 @@ import { Box } from '@mantine/core';
 
 const ScheduleVisit = () => {
   return (
-  
+
     <>
     <div>
     <Box
@@ -41,7 +41,7 @@ const ScheduleVisit = () => {
               to="/placement_dept/addform"
               className="btn btn-primary"
               style={{ width: "10rem" }}
-             
+
             >
               Add Visit
             </Link>
@@ -56,7 +56,7 @@ const ScheduleVisit = () => {
               to="/placement_dept/previousvisit"
               className="btn btn-primary"
               style={{ width: "10rem" }}
-             
+
             >
               Failed Visit
             </Link>

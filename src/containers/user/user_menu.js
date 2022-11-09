@@ -76,6 +76,11 @@ const { Sider } = Layout;
               <Icon type="user" />Applied Jobs
             </Link>
           </Menu.Item>
+          <Menu.Item key ="5">
+            <Link to="/user/notifications">
+              <Icon type="user" /> Notifications
+              </Link>
+          </Menu.Item>
           {/* <Menu.Item key="4">
             <Button href="/home" onClick={logOut}>
               Sign out

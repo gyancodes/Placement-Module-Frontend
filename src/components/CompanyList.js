@@ -54,7 +54,7 @@ class CompanyList extends Component {
     return (
       <Container>
        <div className="mt-3">
-         <h4>Company List</h4>
+         <h4>Job Application</h4>
           <Row>
             <Col sm="4">
               <Card body>
@@ -68,9 +68,9 @@ class CompanyList extends Component {
                   content.
                 </CardText>
                 <Button block color="success">
-                  <Link to="./ShowStudentList.tsx">
-                    <span>My Company</span>
-                  </Link>
+                <a href="/user/applied_job" className="text-decoration-none text-light">
+                    <span>Applied Drive</span>
+                  </a>
                 </Button>
               </Card>
             </Col>
@@ -88,7 +88,7 @@ class CompanyList extends Component {
                 </CardText>
                 <Button block>
                   <a href="/user/new_job" className="text-decoration-none text-light">
-                 New Company
+                  Upcoming Recruitment Drives
                   </a>
                 </Button>
 

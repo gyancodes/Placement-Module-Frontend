@@ -2,29 +2,24 @@ import React from 'react'
 import { Box } from '@mantine/core';
 
 
-const PreviousVisit = () => {
+const Notifications = () => {
   return (
     <>
      <Box
       sx={(theme) => ({
-        backgroundColor: theme.colorScheme === 'red' ? theme.colors.red[10] : theme.colors.red[6],
+        backgroundColor: theme.colorScheme === 'green' ? theme.colors.green[10] : theme.colors.green[6],
         textAlign: 'center',
         padding: theme.spacing.xl,
         borderRadius: theme.radius.md,
         cursor: 'pointer',
         color: 'white',
         fontSize: '30px'
-
-        // '&:hover': {
-        //   backgroundColor:
-        //     theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
-        // },
       })}
     >
-      Failed Visits
+      Notifications
     </Box>
     </>
   )
 }
 
-export default PreviousVisit
+export default Notifications

@@ -63,18 +63,23 @@ const { Sider } = Layout;
           </Menu.Item>
           <Menu.Item key="2">
             <Link to="/user/companys">
-              <Icon type="user" />Company List
+              <Icon type="user" />Job Application
             </Link>
           </Menu.Item>
           <Menu.Item key="3">
             <Link to="/user/new_job">
-              <Icon type="user" />New Drive
+              <Icon type="user" />Upcoming Drives
             </Link>
           </Menu.Item>
           <Menu.Item key="4">
             <Link to="/user/applied_job">
               <Icon type="user" />Applied Jobs
             </Link>
+          </Menu.Item>
+          <Menu.Item key ="5">
+            <Link to="/user/notifications">
+              <Icon type="user" /> Notifications
+              </Link>
           </Menu.Item>
           {/* <Menu.Item key="4">
             <Button href="/home" onClick={logOut}>

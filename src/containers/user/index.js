@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import UserMenu from "./user_menu";
-import Header from "../../components/header/Header";
+
 import { Switch, Route } from "react-router-dom";
 import { Layout } from "antd";
 
@@ -14,13 +14,15 @@ import Apply_Job from "./Apply_job";
 import DetailsEdit from './details_edit'
 import New_Job from "./New_job";
 import AppliedJobList from "./AppliedJobList"
+import HeaderNav from "../../components/layout/header/HeaderNav";
 const { Content } = Layout;
 
 class UserMain extends Component {
   render() {
     return (
       <Layout>
-        {/* <Header/> */}
+       
+        {/* <HeaderNav/> */}
         <UserMenu />
         <Layout>
           <Content className="user-content">

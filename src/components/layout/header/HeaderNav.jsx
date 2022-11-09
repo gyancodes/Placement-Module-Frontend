@@ -49,8 +49,7 @@ import {
 const useStyles = createStyles((theme) => ({
   link_logout: {
     color: "red",
-    fontWeight: 500
-
+    fontWeight: 500,
   },
   link: {
     display: "flex",
@@ -153,6 +152,10 @@ const HeaderNav = () => {
         <Header height={60} px="md">
           <Group position="apart" sx={{ height: "100%" }}>
             <Group>
+              <Image
+                src={require("../../../assets/images/cutm.png")}
+                width={30}
+              ></Image>
               <Link to="/">
                 <Title order={2}>Placement Cell</Title>
               </Link>
@@ -173,9 +176,8 @@ const HeaderNav = () => {
                 <Group>
                   <Link
                     to="/login"
-                  className={classes.link_logout}
+                    className={classes.link_logout}
                     onClick={logOut}
-                    
                   >
                     Logout
                     <svg
@@ -189,8 +191,6 @@ const HeaderNav = () => {
                       fill="none"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                   
-                      
                     >
                       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                       <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />

@@ -1,8 +1,13 @@
+import { Group, Box, Button } from "@mantine/core";
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+
+
 const ScheduleVisit = () => {
   return (
+  
     <>
       <div className="d-flex justify-content-center align-items-center">
         <div
@@ -64,6 +69,16 @@ const ScheduleVisit = () => {
           </div>
         </div>
       </div>
+
+      {/* <Group >
+      <Button variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Indigo cyan</Button>
+      <Button variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Indigo cyan</Button>
+      <Button variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>Indigo cyan</Button>
+
+
+
+
+      </Group> */}
     </>
   );
 };

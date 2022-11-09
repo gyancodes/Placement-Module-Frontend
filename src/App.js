@@ -23,9 +23,9 @@ import { history } from "./helpers/history";
 
 //custom
 import Dashboard from "./components/Pages/Dashboard";
-import Header from "./components/header/Header";
+
 import HeaderNav from "./components/layout/header/HeaderNav"
-import Home from "./components/home/index";
+
 import UserMain from "../src/containers/user/index";
 import AdminMain from "../src/containers/admin/index";
 
@@ -34,7 +34,7 @@ import SignInForm from "./containers/signin/index";
 import ForgotPassword from "./containers/forgot_password/forgot_password";
 import ResetPassword from "./containers/reset_password/reset_password";
 import Test from "./containers/admin/test";
-import Footer from "./components/footer";
+
 import { HeroTitle } from "./components/layout/home/HeroTitle";
 const App = () => {
   return (
@@ -47,7 +47,7 @@ const App = () => {
           {/* <Header /> */}
           <div className="">
             <Switch>
-              {/* <Route exact path={["/", "/home"]} component={Home} /> */}
+              
               <Route exact path={["/", "/home"]} component={HeroTitle}/>
               <Route path="/user" component={UserMain} />
               <Route path="/placement_dept" component={AdminMain} />

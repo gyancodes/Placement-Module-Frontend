@@ -32,13 +32,13 @@ const AdminDashboard = () => {
         size="xl"
       >
          <Group position="center">
-        <Button onClick={() => setOpened(true)}>Open Drawer</Button>
+        <Button onClick={() => setOpened(true)}>Nav</Button>
       </Group>
 
       </Drawer>
 
       <Group position="center">
-        <Button onClick={() => setOpened(true)}>Open Drawer</Button>
+        <Button onClick={() => setOpened(true)}>Side Nav</Button>
       </Group>
     </>
   );

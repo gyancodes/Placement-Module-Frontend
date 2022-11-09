@@ -23,9 +23,9 @@ import Add_job from './Add_job'
 import Applied_St_List from "./Applied_St_List";
 // import Calendar from "../components/Calender/Containers/Home/index";
 import Calendar from "../../components/Calender/Containers/Home/index";
-import ScheduleVisit from "../../components/layout/ScheduleVisit";
-import AddForm from "../../components/layout/AddForm";
-import PreviousVisit from "../../components/layout/PreviousVisit";
+import ScheduleVisit from "../../containers/admin/ScheduleVisit";
+import AddForm from "./AddForm";
+import PreviousVisit from "./PreviousVisit";
 import AdminDashboard from "./AdminDashboard";
 
 
@@ -41,7 +41,7 @@ class AdminMain extends Component {
         <AdminMenu />
         {/* <AdminDashboard/> */}
 
-      
+
         <Layout>
           <Content className="admin-content">
             <Switch>

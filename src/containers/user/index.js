@@ -14,6 +14,7 @@ import Apply_Job from "./Apply_job";
 import DetailsEdit from './details_edit'
 import New_Job from "./New_job";
 import AppliedJobList from "./AppliedJobList"
+import Notifications from "./Notifications";
 const { Content } = Layout;
 
 class UserMain extends Component {
@@ -31,6 +32,7 @@ class UserMain extends Component {
               <Route path="/user/details_edit" component={DetailsEdit} />
               <Route path="/user/apply_job/:id" component={Apply_Job} />
               <Route path="/user/applied_job" component={AppliedJobList} />
+              <Route path="/user/notifications" component={Notifications} />
             </Switch>
           </Content>
         </Layout>

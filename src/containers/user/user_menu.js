@@ -68,7 +68,7 @@ const { Sider } = Layout;
           </Menu.Item>
           <Menu.Item key="3">
             <Link to="/user/new_job">
-              <Icon type="user" />New Drive
+              <Icon type="user" />Upcoming Drives
             </Link>
           </Menu.Item>
           <Menu.Item key="4">

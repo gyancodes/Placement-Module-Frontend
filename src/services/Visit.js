@@ -1,4 +1,4 @@
-// import http from "../http-common";
+import http from "../http-common";
 import authHeader from "./auth-header";
 import axios from "axios";
 
@@ -6,7 +6,7 @@ const API_URL = "http://localhost:8080/api/visits";
 
 const getAll = () => {
   return axios.get(API_URL + "companys", { headers: authHeader() });
-  
+
 };
 
 const get = id => {
@@ -31,8 +31,8 @@ const CompanyService = {
   create,
   update,
   // remove,
- 
-  
+
+
 };
 
 export default CompanyService;

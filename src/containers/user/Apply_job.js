@@ -50,8 +50,8 @@ class CreateCompany extends Component {
           email: this.state.email, 
           regdNo: this.state.regdNo,
         };
-        console.log('applyjob => ' + JSON.stringify(applyjob));
-        console.log("jdsgsbgdvjks")
+        
+        
         // step 5
         if(this.state.id === '_add'){
           ApplyJobSevice.createApplyJob(applyjob).then(res =>{

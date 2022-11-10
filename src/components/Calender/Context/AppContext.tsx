@@ -40,7 +40,7 @@ export const AppContextProvider = (props: React.PropsWithChildren<{}>) => {
       if (data.length === 0) {
         await db.putBulkValue(EVENTS_TABLE_NAME, events);
       } else {
-        console.log("Data already in indexedDb");
+        
       }
 
       const eventsMap: EventsDataMap = {};

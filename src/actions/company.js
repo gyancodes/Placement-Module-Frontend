@@ -26,7 +26,7 @@ import {
   export const retrieveCompanys = () => async (dispatch) => {
     try {
       const res = await CompanyDataService.getAll();
-  console.log(res)
+  
       dispatch({
         type: RETRIEVE_COMPANYS,
         payload: res.data,

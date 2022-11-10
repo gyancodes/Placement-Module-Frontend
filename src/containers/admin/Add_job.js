@@ -49,7 +49,7 @@ class CreateJob extends Component {
     saveOrUpdateJob = (e) => {
         e.preventDefault();
         let job = {comName: this.state.comName,jobType: this.state.jobType, jobSalary: this.state.jobSalary, jobVacancy: this.state.jobVacancy,jobDescription: this.state.jobDescription,jobRound: this.state.jobRound,jobDate: this.state.jobDate,jobCriteria: this.state.jobCriteria};
-        console.log('job => ' + JSON.stringify(job));
+        
 
         // step 5
         if(this.state.id === '_add'){

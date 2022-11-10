@@ -109,27 +109,27 @@ changejobRoundHandler= (event) => {
     render() {
         return (
             <div>
-            <section class="">
-              <div class="">
-                <div class="row d-flex justify-content-center align-items-center">
-                  <div class="col-lg-12 col-xl-11">
-                    <div class=" text-black">
-                      <div class="card-body p-md-5">
-                        <div class="row justify-content-center">
-                          <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
-                            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+            <section className="">
+              <div className="">
+                <div className="row d-flex justify-content-center align-items-center">
+                  <div className="col-lg-12 col-xl-11">
+                    <div className=" text-black">
+                      <div className="card-body p-md-5">
+                        <div className="row justify-content-center">
+                          <div className="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                            <p className="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
                               {this.getTitle()}
                             </p>
     
-                            <form class="mx-1 mx-md-4">
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                            <form className="mx-1 mx-md-4">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                   <label className='h5'>Company Name</label>
                                   <input
                                     type="text"
                                     id="form3Example1c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Company Name"
                                     value={this.state.comName} onChange={this.changecomNameHandler}
                                   />
@@ -137,14 +137,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
 
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Company job Type</label>
                                   <input
                                     type="text"
                                     id="form3Example1c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Company job Type"
                                     value={this.state.jobType} onChange={this.changejobTypeHandler}
                                   />
@@ -152,14 +152,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
     
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Company Salary</label>
                                   <input
                                     type="text"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Company Salary"
                                     value={this.state.jobSalary} onChange={this.changejobSalaryHandler}
                                   />
@@ -167,14 +167,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
 
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Number Of Vacancy</label>
                                   <input
                                     type="text"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Number Of Vacancy"
                                     value={this.state.jobVacancy} onChange={this.changejobVacancyHandler}
                                   />
@@ -182,14 +182,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
 
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Date Of Drive</label>
                                    <input
                                     type="date"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Description"
                                     value={this.state.jobDate} onChange={this.changejobDateHandler}
                                   />
@@ -197,14 +197,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
 
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>No. Of Round</label>
                                    <textarea
                                     type="text"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="No. Of Round"
                                     value={this.state.jobRound} onChange={this.changejobRoundHandler}
                                   />
@@ -212,14 +212,14 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
 
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Criteria</label>
                                    <textarea
                                     type="text"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Criteria"
                                     value={this.state.jobCriteria} onChange={this.changejobCriteriaHandler}
                                   />
@@ -234,14 +234,14 @@ changejobRoundHandler= (event) => {
       <option value='' selected>Select a Color</option>
     </select> */}
     
-                              <div class="d-flex flex-row align-items-center mb-4">
-                                <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                                <div class="form-outline flex-fill mb-0">
+                              <div className="d-flex flex-row align-items-center mb-4">
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Description</label>
                                    <textarea
                                     type="text"
                                     id="form3Example3c"
-                                    class="form-control"
+                                    className="form-control"
                                     placeholder="Description"
                                     value={this.state.jobDescription} onChange={this.changejobDescriptionHandler}
                                   />
@@ -249,16 +249,16 @@ changejobRoundHandler= (event) => {
                                 </div>
                               </div>
                               
-                              <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                              <div className="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
                                 <button className="btn btn-primary btn-lg" onClick={this.saveOrUpdateJob}>Save</button>
                                  <button className="btn btn-danger btn-lg" onClick={this.cancel.bind(this)} style={{marginLeft: "10px"}}>Cancel</button>
                               </div>
                             </form>
                           </div>
-                          <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                          <div className="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
                             <img
                               src="https://image.freepik.com/free-vector/people-standing-flight-registration-counter-family-baggage-ticket-flat-vector-illustration-travelling-vacation_74855-8511.jpg"
-                              class="img-fluid"
+                              className="img-fluid"
                               alt="Sample image"
                             />
                           </div>

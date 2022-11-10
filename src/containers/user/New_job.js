@@ -62,13 +62,13 @@ class New_Job extends Component {
                 </CardTitle>
 
                 <CardText>
-                  <div class="row about-list">
-                    <div class="col-md-6">
-                      <div class="media">
+                  <div className="row about-list">
+                    <div className="col-md-6">
+                      <div className="media">
                         <label>Date:</label>
                         <p>5/12/22</p>
                       </div>
-                      <div class="media">
+                      <div className="media">
                         <label>Job Role:</label>
                         <p>SDE</p>
                       </div>

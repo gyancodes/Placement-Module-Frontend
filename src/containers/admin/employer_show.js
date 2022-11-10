@@ -24,7 +24,7 @@ class EmployerShow extends Component {
 
   render() {
     const data = this.props.admin.employer;
-    console.log(data);
+    
     if (data) {
       return (
         <div>

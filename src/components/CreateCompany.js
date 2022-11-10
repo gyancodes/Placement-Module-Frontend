@@ -59,7 +59,7 @@ class CreateCompany extends Component {
       comDriveDate: this.state.comDriveDate,
       comDescription: this.state.comDescription,
     };
-    console.log("company => " + JSON.stringify(company));
+    
 
     // step 5
     if (this.state.id === "_add") {

@@ -200,8 +200,8 @@ export function approveUser(sid, token) {
 
 export function employerAdd(values, token) {
   return dispatch => {
-    console.log(token);
-    console.log(values);
+    
+    
 
     axios({
       method: "post",
@@ -230,14 +230,14 @@ export function getEmployerList(token) {
 }
 
 export function getEmployer(id, token) {
-  console.log(id);
+  
   return dispatch => {
     axios({
       method: "get",
       url: `${ROOT_URL}employer/${id}`,
       headers: { "x-access-token": token }
     }).then(data => {
-      console.log(data);
+      
       dispatch({
         type: GET_EMPLOYER,
         payload: data

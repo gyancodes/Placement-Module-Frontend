@@ -49,7 +49,7 @@ class DetailsEditForm extends Component {
         ...fieldValues,    
         dob: fieldValues["dob"].format("YYYY-MM-DD")
       };
-      console.log(values);
+      
       this.props.updateUserProfile(values, token);
     });
   };

@@ -25,8 +25,8 @@ class location extends Component {
         location.getCurrentPosition(function (position) {
             latitude = position.coords.latitude;
             longitude= position.coords.longitude;
-            console.log(latitude);
-            console.log(longitude);
+            
+            
         })
     }
         this.setState({latitude: latitude, longitude: longitude})

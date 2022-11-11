@@ -155,7 +155,7 @@ const HeaderNav = () => {
               <Image
                 src={require("../../../assets/images/cutm.png")}
                 width={30}
-              ></Image>
+               />
               <Link to="/">
                 <Title order={2}>Placement Cell</Title>
               </Link>

@@ -137,9 +137,7 @@ export function HeroTitle() {
             </Container>
 
             <Group>
-                <Image>
-
-                </Image>
+                <Image />
             </Group>
             <div style={{ width: 400, marginLeft: 'auto', marginRight: 'auto' }} className={classes.hiddenImage}>
                     <Image

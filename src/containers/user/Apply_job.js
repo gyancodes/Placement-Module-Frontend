@@ -116,7 +116,7 @@ class CreateCompany extends Component {
     
                             <form className="mx-1 mx-md-4">
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-user fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Your company Name</label>
                                   <input
@@ -131,7 +131,7 @@ class CreateCompany extends Component {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-user fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Enter Your Name</label>
                                   <input
@@ -146,7 +146,7 @@ class CreateCompany extends Component {
                               </div>
     
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Your Email</label>
                                   <input
@@ -161,7 +161,7 @@ class CreateCompany extends Component {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Your Regd No.</label>
                                   <input
@@ -175,7 +175,7 @@ class CreateCompany extends Component {
                                 </div>
                               </div>
                               <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Uplod CV</Label>
                               <input

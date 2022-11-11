@@ -64,9 +64,9 @@ const App = () => {
               <Route path="/companys_list" component={CompanyPage} />
               <Route path="/company_list" component={CompanyList} />
               <Route path="/companys_listpage" component={CompanysList} />
-              <Route path="/add_company/:id" component={CreateCompany}></Route>
-              <Route path="/view_company/:id" component={ViewCompany}></Route>
-              <Route path="/test" component={Test}></Route>
+              <Route path="/add_company/:id" component={CreateCompany} />
+              <Route path="/view_company/:id" component={ViewCompany} />
+              <Route path="/test" component={Test} />
             </Switch>
           </div>
   

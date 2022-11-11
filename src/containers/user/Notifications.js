@@ -26,12 +26,12 @@ const Notifications = (args) => {
     >
       Notifications
     </Box>
-    <br></br>
+    <br />
     <React.StrictMode>
     <ListGroup>
     <ListGroupItem>
-    <tag>Alert! Report at Hall No. 6 immediately for pre-placement talk. <br></br></tag>
-    <br></br>
+    <tag>Alert! Report at Hall No. 6 immediately for pre-placement talk. <br /></tag>
+    <br />
       <Button color="primary" onClick={toggle1} style={{ marginBottom: '1rem' }}>
         Expand
       </Button>
@@ -49,8 +49,8 @@ const Notifications = (args) => {
       </Collapse>
       </ListGroupItem>
       <ListGroupItem>
-    <tag>Alert! Report at Hall No. 2 immediately for pre-placement talk. <br></br></tag>
-    <br></br>
+    <tag>Alert! Report at Hall No. 2 immediately for pre-placement talk. <br /></tag>
+    <br />
       <Button color="primary" onClick={toggle2} style={{ marginBottom: '1rem' }}>
         Expand
       </Button>

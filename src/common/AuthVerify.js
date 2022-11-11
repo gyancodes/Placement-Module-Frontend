@@ -22,7 +22,7 @@ const AuthVerify = (props) => {
     }
   });
 
-  return <div></div>;
+  return <div />;
 };
 
 export default AuthVerify;

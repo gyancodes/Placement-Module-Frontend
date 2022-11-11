@@ -136,7 +136,7 @@ class CreateCompany extends Component {
 
                         <form className="mx-1 mx-md-4">
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-user fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                               <Label className="h5">Your company Name</Label>
                               <input
@@ -151,7 +151,7 @@ class CreateCompany extends Component {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-user fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">YourCompany Address</Label>
                               <input
@@ -171,7 +171,7 @@ class CreateCompany extends Component {
 
                 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Your Company Email</Label>
                               <input
@@ -186,7 +186,7 @@ class CreateCompany extends Component {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Your Company Type</Label>
                               <input
@@ -202,7 +202,7 @@ class CreateCompany extends Component {
 
                           {/* placement manager data */}
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Company Staff Name</Label>
                               <input
@@ -217,7 +217,7 @@ class CreateCompany extends Component {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Meeting Time</Label>
                               <input
@@ -232,7 +232,7 @@ class CreateCompany extends Component {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Meeting Date</Label>
                               <input
@@ -247,7 +247,7 @@ class CreateCompany extends Component {
                           </div>
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Meeting Drive Date</Label>
                               <input
@@ -265,7 +265,7 @@ class CreateCompany extends Component {
                           {/* placement manager data end */}
 
                           <div className="d-flex flex-row align-items-center mb-4">
-                            <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                            <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                             <div className="form-outline flex-fill mb-0">
                             <Label className="h5">Description</Label>
                               <textarea

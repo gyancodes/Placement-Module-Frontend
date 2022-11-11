@@ -123,7 +123,7 @@ changejobRoundHandler= (event) => {
     
                             <form className="mx-1 mx-md-4">
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-user fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                   <label className='h5'>Company Name</label>
                                   <input
@@ -138,7 +138,7 @@ changejobRoundHandler= (event) => {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-user fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-user fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Company job Type</label>
                                   <input
@@ -153,7 +153,7 @@ changejobRoundHandler= (event) => {
                               </div>
     
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Company Salary</label>
                                   <input
@@ -168,7 +168,7 @@ changejobRoundHandler= (event) => {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Number Of Vacancy</label>
                                   <input
@@ -183,7 +183,7 @@ changejobRoundHandler= (event) => {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Date Of Drive</label>
                                    <input
@@ -198,7 +198,7 @@ changejobRoundHandler= (event) => {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>No. Of Round</label>
                                    <textarea
@@ -213,7 +213,7 @@ changejobRoundHandler= (event) => {
                               </div>
 
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Criteria</label>
                                    <textarea
@@ -235,7 +235,7 @@ changejobRoundHandler= (event) => {
     </select> */}
     
                               <div className="d-flex flex-row align-items-center mb-4">
-                                <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                                <i className="fas fa-envelope fa-lg me-3 fa-fw" />
                                 <div className="form-outline flex-fill mb-0">
                                 <label className='h5'>Description</label>
                                    <textarea

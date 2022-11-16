@@ -67,13 +67,14 @@ const ScheduleVisit = () => {
           style={{ width: "18rem", height: "10rem" }}
         >
           <div className="card-body">
-            <a
-              href="www"
+          <Link
+              to="/placement_dept/upcomingvisit"
               className="btn btn-primary"
               style={{ width: "10rem" }}
+
             >
               Upcoming Visit
-            </a>
+            </Link>
           </div>
         </div>
         <div
@@ -81,13 +82,14 @@ const ScheduleVisit = () => {
           style={{ width: "18rem", height: "10rem" }}
         >
           <div className="card-body">
-            <a
-              href="www"
+          <Link
+              to="/placement_dept/completedvisit"
               className="btn btn-primary"
               style={{ width: "10rem" }}
+
             >
               Completed Visit
-            </a>
+            </Link>
           </div>
         </div>
       </div>

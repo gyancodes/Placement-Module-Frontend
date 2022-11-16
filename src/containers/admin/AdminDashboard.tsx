@@ -20,7 +20,7 @@ const AdminDashboard = () => {
 
   return (
     <>
-    <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar}  />
+    <Navbar height={700} width={{ sm: 300 }} p="md" className={classes.navbar} children={undefined}  />
       <Drawer
         opened={opened}
         onClose={() => setOpened(false)}

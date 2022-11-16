@@ -2,12 +2,12 @@ import React from 'react'
 import { Box } from '@mantine/core';
 
 
-const PreviousVisit = () => {
+const CompletedVisit = () => {
   return (
     <>
      <Box
       sx={(theme) => ({
-        backgroundColor: theme.colorScheme === 'red' ? theme.colors.red[10] : theme.colors.red[6],
+        backgroundColor: theme.colorScheme === 'green' ? theme.colors.green[10] : theme.colors.green[6],
         textAlign: 'center',
         padding: theme.spacing.xl,
         borderRadius: theme.radius.md,
@@ -21,10 +21,10 @@ const PreviousVisit = () => {
         // },
       })}
     >
-      Failed Visits
+      Completed Visits
     </Box>
     </>
   )
 }
 
-export default PreviousVisit;
+export default CompletedVisit;

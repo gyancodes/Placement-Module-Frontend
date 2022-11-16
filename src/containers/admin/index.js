@@ -27,6 +27,8 @@ import ScheduleVisit from "../../containers/admin/ScheduleVisit";
 import AddForm from "./AddForm";
 import PreviousVisit from "./PreviousVisit";
 import AdminDashboard from "./AdminDashboard";
+import UpcomingVisit from "./UpcomingVisit";
+import CompletedVisit from "./CompletedVisit";
 
 
 
@@ -57,8 +59,9 @@ class AdminMain extends Component {
               <Route path="/placement_dept/schedulemeeting" component={Calendar} />
               <Route path="/placement_dept/addform" component={AddForm} />
               <Route path="/placement_dept/previousvisit" component={PreviousVisit} />
+              <Route path="/placement_dept/upcomingvisit" component={UpcomingVisit} />
+              <Route path="/placement_dept/completedvisit" component={CompletedVisit} />
               <Route to="/placement_dept/schedulevisit" component={ScheduleVisit} />
-              {/* <Route path="/placement_dept/addform" component={AddForm} /> */}
               {/* <Route to="/placement_dept/schedulevisit/addform" component={AddForm} /> */}
               {/* <Route to="/placement_dept/schedulevisit/previousvisit" component={PreviousVisit} />  */}
               {/* <Route to="/placement_dept/addformfhd" component={AddForm} /> */}

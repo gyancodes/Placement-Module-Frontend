@@ -1,5 +1,7 @@
 import React from 'react'
 import { Box } from '@mantine/core';
+import { Button } from 'reactstrap';
+import { ListGroup, ListGroupItem } from 'reactstrap';
 
 
 const PreviousVisit = () => {
@@ -11,7 +13,6 @@ const PreviousVisit = () => {
         textAlign: 'center',
         padding: theme.spacing.xl,
         borderRadius: theme.radius.md,
-        cursor: 'pointer',
         color: 'white',
         fontSize: '30px'
 
@@ -23,7 +24,30 @@ const PreviousVisit = () => {
     >
       Failed Visits
     </Box>
+    <br></br>
+    <ListGroup horizontal>
+    <ListGroupItem>Company 1</ListGroupItem>
+    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
+    </ListGroup>
+
+    <ListGroup horizontal>
+    <ListGroupItem>Company 2</ListGroupItem>
+    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
+    </ListGroup>
+
+    <ListGroup horizontal>
+    <ListGroupItem>Company 3</ListGroupItem>
+    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
+    <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
+    </ListGroup>
     </>
+    
+    
   )
 }
 

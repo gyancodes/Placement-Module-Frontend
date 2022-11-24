@@ -78,7 +78,7 @@ const AdminMenu = () => {
         </Menu.Item>
         <Menu.Item key="4">
           <Link to="/placement_dept/employer_form/_add">
-            <Icon type="user" />Company Register Form
+            <Icon type="user" />Company Registeration Form
           </Link>
         </Menu.Item>
         <Menu.Item key="5">

@@ -26,20 +26,8 @@ const CompletedVisit = () => {
     </Box>
     <br></br>
     <ListGroup horizontal>
-    <ListGroupItem>Company 1</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
-    <ListGroupItem ><Button color= "primary">Details</Button></ListGroupItem>
-    </ListGroup>
-
-    <ListGroup horizontal>
-    <ListGroupItem>Company 2</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
-    <ListGroupItem ><Button color= "primary">Details</Button></ListGroupItem>
-    </ListGroup>
-
-    <ListGroup horizontal>
-    <ListGroupItem>Company 3</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem>Cognizant</ListGroupItem>
+    <ListGroupItem>10/10/2022</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Details</Button></ListGroupItem>
     </ListGroup>
     </>

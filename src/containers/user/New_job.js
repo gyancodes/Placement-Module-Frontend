@@ -58,7 +58,7 @@ class New_Job extends Component {
               <Card body>
                 <CardTitle tag="h5">
                   <IoMan className="font-size-xl" />
-                  Company Name
+                  Google Inc.
                 </CardTitle>
 
                 <CardText>
@@ -70,7 +70,7 @@ class New_Job extends Component {
                       </div>
                       <div className="media">
                         <label>Job Role:</label>
-                        <p>SDE</p>
+                        <p>SDE-I</p>
                       </div>
                     </div>
                   </div>

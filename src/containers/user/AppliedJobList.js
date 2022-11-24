@@ -60,7 +60,7 @@ class AppliedJobList extends Component {
               <Card body>
                 <CardTitle tag="h5">
                   <IoMan className="font-size-xl" />
-                  Company Name
+                  Amazon
                 </CardTitle>
 
                 <CardText>

@@ -26,22 +26,15 @@ const PreviousVisit = () => {
     </Box>
     <br></br>
     <ListGroup horizontal>
-    <ListGroupItem>Company 1</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem>Atos</ListGroupItem>
+    <ListGroupItem>01/09/2022</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
     <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
     </ListGroup>
 
     <ListGroup horizontal>
-    <ListGroupItem>Company 2</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
-    <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
-    <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
-    </ListGroup>
-
-    <ListGroup horizontal>
-    <ListGroupItem>Company 3</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem>Coditas</ListGroupItem>
+    <ListGroupItem>06/10/2022</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
     <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
     </ListGroup>

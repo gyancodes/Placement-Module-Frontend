@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box } from '@mantine/core';
-import { ListGroup, ListGroupItem } from 'reactstrap';
-import { Button } from 'reactstrap';
+import { ListGroup, ListGroupItem} from 'reactstrap';
+import { Button, Container } from 'reactstrap';
 
 
 const UpcomingVisit = () => {
@@ -24,31 +24,34 @@ const UpcomingVisit = () => {
     >
       Upcoming Visits
     </Box>
+    <Container size="xs" px="xs">
     <br></br>
     <ListGroup horizontal>
-    <ListGroupItem>Company 1</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem >Mindtree </ListGroupItem>
+    <ListGroupItem>12/03/2023</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Edit</Button></ListGroupItem>    
     <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
     <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
     </ListGroup>
 
     <ListGroup horizontal>
-    <ListGroupItem>Company 2</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem>Spotify </ListGroupItem>
+    <ListGroupItem>03/04/2023</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Edit</Button></ListGroupItem>    
     <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
     <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
     </ListGroup>
 
     <ListGroup horizontal>
-    <ListGroupItem>Company 3</ListGroupItem>
-    <ListGroupItem>DD/MM/YYYY</ListGroupItem>
+    <ListGroupItem>Cisco </ListGroupItem>
+    <ListGroupItem>02/02/2023</ListGroupItem>
     <ListGroupItem ><Button color= "primary">Edit</Button></ListGroupItem>    
     <ListGroupItem ><Button color= "primary">Re-Schedule</Button></ListGroupItem>
     <ListGroupItem ><Button color= "primary">Cancel</Button></ListGroupItem>
     </ListGroup>
+    </Container>
     </>
+    
   )
 }
 

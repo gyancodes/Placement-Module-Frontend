@@ -2,8 +2,7 @@ import React from 'react';
 import { createStyles, Container, Text, Button, Group, Image } from '@mantine/core';
 import { Link } from "react-router-dom";
 import heroimg from "../../../assets/images/heroimg.svg";
-import { ClassNames } from '@emotion/react';
-// import { GithubIcon } from '@mantine/ds';
+
 
 const BREAKPOINT = '@media (max-width: 755px)';
 
@@ -14,7 +13,6 @@ const useStyles = createStyles((theme) => ({
         alignItems: "center",
         position: 'relative',
         boxSizing: 'border-box',
-        // backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.white,
 
     },
 
@@ -123,11 +121,11 @@ export function HeroTitle() {
                     <Link to="/signin">
                         <Button
                             component="a"
-                            href="https://github.com/mantinedev/mantine"
+                            
                             size="xl"
                             variant="default"
                             className={classes.control}
-                        // leftIcon={<GithubIcon size={20} />}
+                       
                         >
                             Register
                         </Button>

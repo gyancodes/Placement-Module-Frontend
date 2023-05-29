@@ -11,7 +11,7 @@ const CompanyPage = ({ component: roles }) => {
      
     }
   
-    if(currentUser.roles  == "ROLE_USER"){
+    if(currentUser.roles  === "ROLE_USER"){
       return <Redirect to="/company_list" />;
     }else{
       return <Redirect to="/companys_listpage" />;

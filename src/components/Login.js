@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
-import '../Auth.css'
+import "../Auth.css";
 
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
@@ -69,7 +69,6 @@ const Login = (props) => {
     return <Redirect to="/profile" />;
   }
 
-
   return (
     <div className="col-md-12">
       <div className="card card-container">
@@ -91,7 +90,6 @@ const Login = (props) => {
               validations={[required]}
             />
           </div>
-
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <Input
@@ -103,19 +101,14 @@ const Login = (props) => {
               validations={[required]}
             />
           </div>
-          <Link to="/forgot_password">
-            <a>Forgot password</a>
-          </Link>
+          <Link to="/forgot_password">Forgot Password</Link>
           <div className="form-group mt-2">
             <button className="btn btn-primary btn-block" disabled={loading}>
-              {loading && (
-                <span className="spinner-border spinner-border-sm" />
-              )}
+              {loading && <span className="spinner-border spinner-border-sm" />}
               <span>Login</span>
             </button>
           </div>
-         Or <Link to="/signup"><a>Sign up now!</a></Link>
-
+          Or <Link to="/signup">Sign up now!</Link>
           {message && (
             <div className="form-group">
               <div className="alert alert-danger" role="alert">

@@ -8,7 +8,7 @@ import { logout } from "../../../actions/auth";
 import { clearMessage } from "../../../actions/message";
 import { history } from "../../../helpers/history";
 
-import { CUTMLogo } from "../../../assets/images/cutm.png";
+// import { CUTMLogo } from "../../../assets/images/cutm.png";
 
 import {
   createStyles,
@@ -16,35 +16,35 @@ import {
   Header,
   Group,
   Button,
-  UnstyledButton,
-  Text,
-  ThemeIcon,
+  // UnstyledButton,
+  // Text,
+  // ThemeIcon,
   Divider,
-  Center,
+  // Center,
   Box,
   Burger,
   Drawer,
-  Collapse,
+  // Collapse,
   ScrollArea,
   Title,
-  NavLink,
-  HoverCard,
-  Anchor,
-  SimpleGrid,
+  // NavLink,
+  // HoverCard,
+  // Anchor,
+  // SimpleGrid,
 } from "@mantine/core";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 import { useDisclosure } from "@mantine/hooks";
-import {
-  IconNotification,
-  IconCode,
-  IconBook,
-  IconChartPie3,
-  IconFingerprint,
-  IconCoin,
-  IconChevronDown,
-} from "@tabler/icons";
+// import {
+//   IconNotification,
+//   IconCode,
+//   IconBook,
+//   IconChartPie3,
+//   IconFingerprint,
+//   IconCoin,
+//   IconChevronDown,
+// } from "@tabler/icons";
 
 const useStyles = createStyles((theme) => ({
   link_logout: {
@@ -108,7 +108,7 @@ const useStyles = createStyles((theme) => ({
 const HeaderNav = () => {
   const [drawerOpened, { toggle: toggleDrawer, close: closeDrawer }] =
     useDisclosure(false);
-  const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
+  // const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
 
   const [showModeratorBoard, setShowModeratorBoard] = useState(false);
@@ -162,16 +162,7 @@ const HeaderNav = () => {
             </Group>
             {currentUser ? (
               <Group sx={{ height: "100%" }} spacing={0}>
-                {/* <a href="#" className={classes.link}>
-                Home
-              </a>
-
-              <a href="#" className={classes.link}>
-                About
-              </a>
-              <a href="#" className={classes.link}>
-                Contact
-              </a> */}
+                
 
                 <Group>
                   <Link

@@ -19,8 +19,8 @@ const Profile = () => {
               <div className="about-text go-to">
                 <h3 className="dark-color">About Me</h3>
                 <h6 className="dark-color lead">I'm {currentUser.username}</h6>
-                {/* <h6 class="theme-color lead">A Lead UX &amp; UI designer</h6> */}
-                {/* <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p> */}
+                {/* <h6 class="theme-color lead">A Lead UX &amp; UI designer</h6>
+                <p>I <mark>design and develop</mark> services for customers of all sizes, specializing in creating stylish, modern websites, web services and online stores. My passion is to design digital user experiences through the bold interface and meaningful interactions.</p> */}
                 <div className="row about-list">
                   <div className="col-md-6">
                     <div className="media">
@@ -49,7 +49,7 @@ const Profile = () => {
                                     </div> */}
                   </div>
                   <div className="col-md-6">
-                    <div className="media">
+                    {/* <div className="media">
                       <label>Token:</label>
                       <p>
                         {currentUser.accessToken.substring(0, 10)} ...{" "}
@@ -57,8 +57,8 @@ const Profile = () => {
                           currentUser.accessToken.length - 10
                         )}
                       </p>
-                    </div>
-                    <div className="media">
+                    </div> */}
+                    {/* <div className="media">
                       <label>Authorities:</label>
                       <p>
                         {" "}
@@ -69,7 +69,7 @@ const Profile = () => {
                             ))}
                         </ul>
                       </p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

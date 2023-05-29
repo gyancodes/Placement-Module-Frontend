@@ -33,7 +33,7 @@ import {
   // SimpleGrid,
 } from "@mantine/core";
 
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { useDisclosure } from "@mantine/hooks";
 // import {
@@ -155,15 +155,28 @@ const HeaderNav = () => {
               <Image
                 src={require("../../../assets/images/cutm.png")}
                 width={30}
-               />
+              />
               <Link to="/">
                 <Title order={2}>Placement Cell</Title>
               </Link>
             </Group>
+            <Group
+              sx={{ height: "100%" }}
+              spacing={0}
+              className={classes.hiddenMobile}
+            >
+              <Link to="/" className={classes.link}>
+                Home
+              </Link>
+              <Link to="/about" className={classes.link}>
+                About
+              </Link>
+              <Link to="/about" className={classes.link}>
+                Contact
+              </Link>
+            </Group>
             {currentUser ? (
               <Group sx={{ height: "100%" }} spacing={0}>
-                
-
                 <Group>
                   <Link
                     to="/login"
@@ -235,6 +248,21 @@ const HeaderNav = () => {
               color={theme.colorScheme === "dark" ? "dark.5" : "gray.1"}
             />
 
+            <Group
+              sx={{ height: "100%" }}
+              spacing={0}
+              className={classes.hiddenDesktop}
+            >
+              <Link to="/" className={classes.link}>
+                Home
+              </Link>
+              <Link to="/about" className={classes.link}>
+                About
+              </Link>
+              <Link to="/about" className={classes.link}>
+                Contact
+              </Link>
+            </Group>
             <Group position="center" grow pb="xl" px="md">
               <Button variant="default">Log in</Button>
               <Button>Sign up</Button>

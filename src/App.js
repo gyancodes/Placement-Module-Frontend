@@ -36,6 +36,7 @@ import ResetPassword from "./containers/reset_password/reset_password";
 import Test from "./containers/admin/test";
 
 import { HeroTitle } from "./components/layout/home/HeroTitle";
+import AboutUs from "./components/layout/About/AboutUs";
 const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
@@ -49,6 +50,7 @@ const App = () => {
             <Switch>
               
               <Route exact path={["/", "/home"]} component={HeroTitle}/>
+              <Route path="/about" component={AboutUs}/>
               <Route path="/user" component={UserMain} />
               <Route path="/placement_dept" component={AdminMain} />
               <Route path="/dashboard" component={Dashboard} />

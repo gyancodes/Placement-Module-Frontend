@@ -52,6 +52,17 @@ const AdminMenu = () => {
     <>
       <Sider width={200} className="admin-sider">
         <Menu mode="inline" className="admin-menu">
+
+          <Menu.Item key="0">
+            <Link to="/placement_dept/dashboard">
+              <Icon type="dashboard" />
+              Dashboard
+            </Link>
+          </Menu.Item>
+
+
+
+
           <Menu.Item key="1">
             <Link to="/placement_dept/profile">
               <Icon type="user" />
@@ -60,8 +71,8 @@ const AdminMenu = () => {
           </Menu.Item>
           <Menu.Item key="2">
             <Link to="/placement_dept/applied_st_list">
-              <Icon type="user" />
-              Appied Students
+              <Icon type="profile" />
+              Applied Students
             </Link>
           </Menu.Item>
           {/* <Menu.Item key="3">
@@ -69,24 +80,25 @@ const AdminMenu = () => {
             <Icon type="user" />Schedule Meeting
           </Link>
         </Menu.Item> */}
-          <Menu.Item key="4">
+          {/* <Menu.Item key="4">
             <Link to="/placement_dept/employer_form/_add">
-              <Icon type="user" />
+              <Icon type="file" />
               Register Company
             </Link>
-          </Menu.Item>
+          </Menu.Item> */}
           <Menu.Item key="5">
-            <Link to="/placement_dept/employer_list">
-              <Icon type="user" />
-              Company List
-            </Link>
-          </Menu.Item>
-          <Menu.Item key="6">
-            <Link to="/placement_dept/new_job">
-              <Icon type="user" />
+            <Link to="/placement_dept/create-job-post">
+              <Icon type="file" />
               New Drive
             </Link>
           </Menu.Item>
+          <Menu.Item key="6">
+            <Link to="/placement_dept/employer_list">
+              <Icon type="unordered-list" />
+              Current Drive
+            </Link>
+          </Menu.Item>
+          
           {/* <Menu.Item key="7">
           <Link to="/placement_dept/Schedule_Visit">
             <Icon type="user" />Schedule Visit

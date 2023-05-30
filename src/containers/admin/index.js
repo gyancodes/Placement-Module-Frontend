@@ -20,6 +20,7 @@ import EmployerShow from "./employer_show";
 import New_Job from "./New_Job";
 import Add_job from "./Add_job";
 import Applied_St_List from "./Applied_St_List";
+import NewDrive from "./NewDrive";
 // import Calendar from "../components/Calender/Containers/Home/index";
 // import Calendar from "../../components/Calender/Containers/Home/index";
 // import ScheduleVisit from "../../containers/admin/ScheduleVisit";
@@ -46,12 +47,13 @@ class AdminMain extends Component {
                 path="/placement_dept/employer_list"
                 component={CompanyList}
               />
-              <Route path="/placement_dept/new_job" component={New_Job} />
+              {/* <Route path="/placement_dept/new_drive" component={New_Job} /> */}
+              <Route path="/placement_dept/create-job-post" component={NewDrive} />
               <Route
                 path="/placement_dept/employer_form/:id"
                 component={CreateCompany}
               />
-              <Route path="/placement_dept/add_job/:id" component={Add_job} />
+              <Route path="/placement_dept/add_drive/:id" component={Add_job} />
               <Route path="/placement_dept/users" component={UserList} />
               <Route path="/placement_dept/profile" component={Profile} />
        

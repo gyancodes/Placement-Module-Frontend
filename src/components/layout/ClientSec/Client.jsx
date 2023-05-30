@@ -8,6 +8,7 @@ import ashok from "../../../assets/Company/ashok.png";
 import deloitte from "../../../assets/Company/Deloitte.png";
 import hyundai from "../../../assets/Company/hyundai.png";
 
+
 const Client = () => {
   return (
     <section className="clients">
@@ -18,6 +19,14 @@ const Client = () => {
         <img src={ashok} alt="" />
         
       </div>
+      <div className="company-container">
+        <img src={deloitte} alt="" />
+        <img src={hyundai} alt="" />
+       
+        
+      </div>
+
+      
       
     </section>
   );

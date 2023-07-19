@@ -9,7 +9,8 @@ import "../../style/user.css";
 
 
 import CompanyList from "../../components/CompanyList";
-import UserProfile from "./profile";
+// import UserProfile from "./ResumeSection";
+import ResumeSection from "./ResumeSection";
 import Apply_Job from "./Apply_job";
 import DetailsEdit from './details_edit'
 import New_Job from "./New_job";
@@ -31,7 +32,8 @@ class UserMain extends Component {
         <Layout>
           <Content className="user-content">
             <Switch>
-              <Route path="/user/profile" component={UserProfile} />
+              {/* <Route path="/user/profile" component={UserProfile} /> */}
+              <Route path="/user/ResumeSection" component={ResumeSection} />
               <Route path="/user/companys" component={CompanyList} />
               <Route path="/user/new_job" component={New_Job} />
               <Route path="/user/details_edit" component={DetailsEdit} />

@@ -119,7 +119,7 @@ class CreateCompany extends Component {
     }
   }
   render() {
-    const { latitude, longitude } = this.state;
+    // const { latitude, longitude } = this.state;
     return (
       <div>
         <section className="">
@@ -300,7 +300,7 @@ class CreateCompany extends Component {
                         <img
                           src="https://image.freepik.com/free-vector/people-standing-flight-registration-counter-family-baggage-ticket-flat-vector-illustration-travelling-vacation_74855-8511.jpg"
                           className="img-fluid"
-                          alt="Sample image"
+                          alt="Sample"
                         />
                       </div>
                     </div>

@@ -11,6 +11,7 @@ import { Link } from "react-router-dom";
 import heroimg from "../../../assets/images/interview.png";
 import "../../../style/HeroTitle.css";
 import Client from "../ClientSec/Client";
+// import FeatureSec from "./FeatureSec";
 
 const BREAKPOINT = "@media (max-width: 755px)";
 
@@ -162,6 +163,7 @@ export function HeroTitle() {
       >
         <Image radius="md" src={img} alt="Random unsplash image" />
       </div> */}
+      {/* <FeatureSec/> */}
     </div>
     <Client/>
     </>

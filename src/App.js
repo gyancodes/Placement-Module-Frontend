@@ -37,6 +37,9 @@ import Test from "./containers/admin/test";
 
 import { HeroTitle } from "./components/layout/home/HeroTitle";
 import AboutUs from "./components/layout/About/AboutUs";
+import LoginForm from "./components/login/LoginForm";
+import SignUp from "./components/signup/SignUp";
+import AdminDashboard from "./containers/admin/AdminDashboard";
 const App = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
@@ -52,7 +55,7 @@ const App = () => {
               <Route exact path={["/", "/home"]} component={HeroTitle}/>
               <Route path="/about" component={AboutUs}/>
               <Route path="/user" component={UserMain} />
-              <Route path="/placement_dept" component={AdminMain} />
+              <Route path="/placement_dept" component={AdminDashboard} />
               <Route path="/dashboard" component={Dashboard} />
               <Route path="/signup" component={SignUpForm} />
               <Route path="/signin" component={SignInForm} />
@@ -62,6 +65,7 @@ const App = () => {
 
               <Route path="/login" component={Login} />
               <Route path="/register" component={Register} />
+              {/* <Route path="/register" component={SignUp} /> */}
               <Route path="/profile" component={Profile} />
               <Route path="/companys_list" component={CompanyPage} />
               <Route path="/company_list" component={CompanyList} />

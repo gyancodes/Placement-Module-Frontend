@@ -7,8 +7,8 @@ const AboutUs = () => {
     <>
       <section className="cta">
         <div className="container">
-          <div class="row g-5">
-            <div class="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
+          <div className="row g-5">
+            <div className="col-lg-8 col-md-6 content d-flex flex-column justify-content-center order-last order-md-first">
               <h3>
                 Placement <em>Portal</em>
               </h3>
@@ -22,14 +22,14 @@ const AboutUs = () => {
                 contacts between companies and graduates. The number of students
                 placed through the campus interviews is continuously rising.
               </p>
-              <a class="cta-btn align-self-start" href="www">
+              <a className="cta-btn align-self-start" href="www">
                 Get Started
               </a>
             </div>
 
-            <div class="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
-              <div class="img">
-                <img src={placement} alt="" class="img-fluid" />
+            <div className="col-lg-4 col-md-6 order-first order-md-last d-flex align-items-center">
+              <div className="img">
+                <img src={placement} alt="" className="img-fluid" />
               </div>
             </div>
           </div>

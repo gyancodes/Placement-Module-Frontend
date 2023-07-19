@@ -12,8 +12,8 @@ const useStyles = createStyles((theme) => ({
 }));
 
 const NewDrive = () => {
-  const { classes, theme } = useStyles();
-  const [copmanyName, setCompanyName] = useState("");
+  const { classes } = useStyles();
+  const [companyName, setCompanyName] = useState("");
   const [role, setRole] = useState("");
   const [ctc, setCtc] = useState("");
   const [description, setDescription] = useState("");
@@ -42,9 +42,10 @@ const NewDrive = () => {
               placeholder="Company Name"
               required
               maxLength={20}
+              spellCheck={true}
               radius="xs"
               size="md"
-              value={copmanyName}
+              value={companyName}
               onChange={(event) => setCompanyName(event.currentTarget.value)}
             ></TextInput>
           </div>

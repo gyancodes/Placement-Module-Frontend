@@ -111,8 +111,8 @@ const HeaderNav = () => {
   // const [linksOpened, { toggle: toggleLinks }] = useDisclosure(false);
   const { classes, theme } = useStyles();
 
-  const [showModeratorBoard, setShowModeratorBoard] = useState(false);
-  const [showAdminBoard, setShowAdminBoard] = useState(false);
+  // const [showModeratorBoard, setShowModeratorBoard] = useState(false);
+  // const [showAdminBoard, setShowAdminBoard] = useState(false);
 
   const { user: currentUser } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
@@ -128,13 +128,13 @@ const HeaderNav = () => {
   }, [dispatch]);
 
   useEffect(() => {
-    if (currentUser) {
-      setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
-      setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
-    } else {
-      setShowModeratorBoard(false);
-      setShowAdminBoard(false);
-    }
+    // if (currentUser) {
+    //   setShowModeratorBoard(currentUser.roles.includes("ROLE_MODERATOR"));
+    //   setShowAdminBoard(currentUser.roles.includes("ROLE_ADMIN"));
+    // } else {
+    //   setShowModeratorBoard(false);
+    //   setShowAdminBoard(false);
+    // }
 
     EventBus.on("logout", () => {
       logOut();

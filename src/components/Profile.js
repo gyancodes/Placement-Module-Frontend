@@ -11,7 +11,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="container">
+    <div className="containern">
       <section className="section about-section gray-bg" id="about">
         <div className="container">
           <div className="row align-items-center flex-row-reverse">

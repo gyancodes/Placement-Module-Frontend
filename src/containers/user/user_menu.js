@@ -57,7 +57,7 @@ const { Sider } = Layout;
       <Sider width={200} className="user-sider">
         <Menu mode="inline" className="user-menu">
           <Menu.Item key="1">
-            <Link to="/user/profile">
+            <Link to="/user/ResumeSection">
               <Icon type="user" />Profile
             </Link>
           </Menu.Item>
